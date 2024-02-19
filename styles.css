@@ -4,6 +4,79 @@
   padding: 0;
   font-family: "JetBrains Mono", monospace;
 }
+
+@media (min-width : 320px) {
+  #container {
+    width: 80%;
+    background-color: red;
+  }
+
+  #password {
+    width: 80%;
+  }
+
+  #form {
+    width: 80%;
+  }
+}
+
+@media (min-width : 480px) {
+  #container {
+    width: 70%;
+  }
+
+  #password {
+    width: 70%;
+  }
+
+  #form {
+    width: 70%;
+  }
+}
+
+@media (min-width : 768px) {
+  #container {
+    width: 60%;
+  }
+
+  #password {
+    width: 60%;
+  }
+
+  #form {
+    width: 60%;
+  }
+}
+
+@media (min-width : 992px) {
+  #container {
+    width: 50%;
+  }
+
+  #password {
+    width: 50%;
+  }
+
+  #form {
+    width: 50%;
+  }
+}
+
+@media (min-width : 1200px) {
+  #container {
+    width: 40%;
+  }
+
+  #password {
+    width: 40%;
+  }
+
+  #form {
+    width: 40%;
+  }
+}
+
+
 :root {
   --main-color1: #0f0f16;
   --main-color2: #24232c;
@@ -30,8 +103,12 @@ body {
 }
 
 #container {
-  width: 30%;
+  width: 100%;
   border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #title {
@@ -51,6 +128,7 @@ body {
   background-color: var(--main-color2);
   color: var(--main-color4);
   padding: 15px;
+  width: 20%;
   margin-bottom: 15px;
 }
 
@@ -68,6 +146,8 @@ body {
   background-color: var(--main-color2);
   gap: 10px;
   font-size: 17px;
+  padding: 15px;
+  width: 20%;
 }
 
 #characterLength {
@@ -124,7 +204,7 @@ body {
   margin-right: 7px;
 }
 
-#strengthLevel{
+#strengthLevel {
   margin-left: 50px;
   color: var(--main-color7);
 }
