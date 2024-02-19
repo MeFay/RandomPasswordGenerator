@@ -1,0 +1,79 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="wvalueth=device-wvalueth, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Random Password Generator</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="title">
+        <h1>Password Generator</h1>
+      </div>
+
+      <div id="password">
+        <p>P4$5W0rD!</p>
+        <button id="copyBtn"><img src="images/icon-copy.svg" /></button>
+      </div>
+
+      <div id="form">
+        <div id="characterLength">
+          <label>Character Length <span id="c">0</span></label>
+          <input
+            type="range"
+            id="lengthBar"
+            min="1"
+            max="16"
+            oninput="updateLengthValue(this.value)"
+          />
+        </div>
+        <div id="checkboxUppercase">
+          <label>
+            <input type="checkbox" id="uppercase" />Include Uppercase Letters
+          </label>
+        </div>
+
+        <div id="checkboxLowercase">
+          <label>
+            <input type="checkbox" id="lowercase" />Include Lowercase Letters
+          </label>
+        </div>
+
+        <div id="checkboxNumbers">
+          <label> <input type="checkbox" id="numbers" />Include Numbers </label>
+        </div>
+
+        <div id="checkboxSymbols">
+          <label> <input type="checkbox" id="symbols" />Include Symbols </label>
+        </div>
+
+        <div id="strength">
+          <label>STRENGTH: <span id="strengthLevel"></span></label>
+          <div id="strengthBars">
+            <div class="strengthBar"></div>
+            <div class="strengthBar"></div>
+            <div class="strengthBar"></div>
+            <div class="strengthBar"></div>
+          </div>
+        </div>
+
+        <div id="buttonContainer">
+          <button id="generateBtn">
+            GENERATE<img src="images/icon-arrow-right.svg" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

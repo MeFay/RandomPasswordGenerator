@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "JetBrains Mono", monospace;
+}
+:root {
+  --main-color1: #0f0f16;
+  --main-color2: #24232c;
+  --main-color3: #767383;
+  --main-color4: #52515a;
+  --main-color5: #18171f;
+  --main-color6: #a3ffab;
+  --main-color7: #fff;
+  --main-color8: #f9ce5f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-color1);
+  color: var(--main-color7);
+  min-height: 100vh;
+  font-size: 20px;
+}
+
+#container {
+  width: 30%;
+  border-radius: 6px;
+}
+
+#title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  font-size: 10px;
+  color: var(--main-color3);
+}
+
+#password {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 25px;
+  background-color: var(--main-color2);
+  color: var(--main-color4);
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+#copyBtn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-color2);
+  gap: 10px;
+  font-size: 17px;
+}
+
+#characterLength {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 15px;
+}
+
+#characterLength label {
+  display: flex;
+  justify-content: space-between;
+}
+
+#characterLength span {
+  color: var(--main-color6);
+  font-size: 25px;
+}
+#characterLength input {
+  cursor: pointer;
+}
+
+#checkboxUppercase label,
+#checkboxLowercase label,
+#checkboxNumbers label,
+#checkboxSymbols label {
+  display: flex;
+  gap: 5px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+#strength {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 15px;
+  padding: 15px;
+  background-color: var(--main-color5);
+  color: var(--main-color3);
+}
+
+#strengthBars {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.strengthBar {
+  display: flex;
+  width: 5px;
+  height: 20px;
+  border: 1px solid var(--main-color7);
+  margin-right: 7px;
+}
+
+#strengthLevel{
+  margin-left: 50px;
+  color: var(--main-color7);
+}
+
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+#generateBtn {
+  display: flex;
+  justify-content: center;
+  background-color: var(--main-color6);
+  color: var(--main-color2);
+  width: 85%;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#generateBtn:hover {
+  background-color: transparent;
+  border: 1px solid var(--main-color6);
+  color: var(--main-color6);
+}
+
+#buttonContainer img {
+  padding: 2px;
+  margin-left: 15px;
+}
