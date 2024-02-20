@@ -57,23 +57,15 @@ function updateStrengthBars() {
   ];
   let checkedCount = checkboxes.filter((checkbox) => checkbox.checked).length;
 
-  const strengthColorMap = {
-    NONE: "transparent",
-    LOW: "#c1121f",
-    MEDIUM: "#f9ce5f",
-    HIGH: "#06d6a0",
-    "VERY HIGH": "#80ed99",
-  };
-
-  const strengthLevels = ["NONE", "LOW", "MEDIUM", "HIGH", "VERY HIGH"];
-  strengthLevel.innerText = strengthLevels[checkedCount];
+  const strengthLevels = ["none", "low", "medium", "high", "very-high"];
+  strengthLevel.innerText = strengthLevels[checkedCount].toUpperCase();
 
   const strengthBars = document.querySelectorAll(".strengthBar");
   strengthBars.forEach((bar, index) => {
-    bar.style.backgroundColor =
-      index < checkedCount
-        ? strengthColorMap[strengthLevel.innerText]
-        : "transparent";
+    bar.className = 'strengthBar';
+    if (index < checkedCount) {
+      bar.classList.add('strengthBar-' + strengthLevels[checkedCount]);
+    }
   });
 }
 
